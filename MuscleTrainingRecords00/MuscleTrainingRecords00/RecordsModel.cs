@@ -98,27 +98,6 @@ namespace MuscleTrainingRecords00
         }
 
         /*******************セレクトメソッド RecordListPage　 追加*************************************/
-        public static List<RecordsModel> SelectRe()
-        {
-
-            using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
-            {
-
-                try
-                {
-
-                    //データベースに指定したSQLを発行
-                    return db.Query<RecordsModel>("SELECT [M_name] FROM [Records]");
-                    // ORDER BY[M_date]
-                }
-                catch (Exception e)
-                {
-
-                    System.Diagnostics.Debug.WriteLine(e);
-                    return null;
-                }
-            }
-        }
         public static List<RecordsModel> SelectName(String s)
         {
 
