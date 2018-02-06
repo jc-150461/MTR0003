@@ -76,7 +76,7 @@ namespace MuscleTrainingRecords00
 
                 int M_no = no;
 
-                RecordsModel.DeleteRecords(M_no);
+                RecordModelv2.DeleteRecords(M_no);
 
                 InitializeComponent();
 
