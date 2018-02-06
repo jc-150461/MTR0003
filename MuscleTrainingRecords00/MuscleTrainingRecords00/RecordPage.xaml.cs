@@ -62,7 +62,7 @@ namespace MuscleTrainingRecords00
             //RecordModelv2.InsertRe(0, "データ", 0, 0, 0, now);
         }
 
-        private async Task list_ItemTappedAsync(object sender, ItemTappedEventArgs e)
+        private async Task  list_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             Recordv2 n = (Recordv2)(list.SelectedItem);
             int m = n.M_no;
@@ -82,7 +82,5 @@ namespace MuscleTrainingRecords00
 
             }
         }
-      
-
     }
 }
