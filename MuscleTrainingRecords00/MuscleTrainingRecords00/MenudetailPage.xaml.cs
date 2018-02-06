@@ -35,9 +35,9 @@ namespace MuscleTrainingRecords00
         private void addItemButton_Clicked(object sender, EventArgs e)
         {
 
-            DisplayAlert("",""+RecordsModel.SelectRe(),"");
-           /* ReModel.name = t;
-            if (RecordsModel.SelectRe().Equals(t))
+            //DisplayAlert("",""+RecordsModel.SelectRe(),"");
+            ReModel.name = t;
+            if (RecordsModel.SelectRecords() != null && RecordsModel.SelectRe().Equals(t))
             {
                 RecordsModel.UpdateRe(t, date);
                 Navigation.PushAsync(new RecordListPage());
@@ -46,7 +46,7 @@ namespace MuscleTrainingRecords00
                 RecordsModel.InsertRe(1, t, 0, 0, 0, date);
                 Navigation.PushAsync(new RecordListPage());
             }
-            */
+            
 
         }
     }
