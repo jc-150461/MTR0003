@@ -37,14 +37,14 @@ namespace MuscleTrainingRecords00
 
             //DisplayAlert("",""+RecordsModel.SelectRe(),"");
             ReModel.name = t;
-            if (RecordsModel.SelectRecords() != null && RecordsModel.SelectRe().Equals(t))
+            if (RecordsModel.SelectRecords() != null && RecordsModel.SelectRe().ToString().Equals(t))
             {
-                RecordsModel.UpdateRe(t, date);
+                //RecordsModel.UpdateRe(t, date);
                 Navigation.PushAsync(new RecordListPage());
             }
             else{
                 RecordsModel.InsertRe(1, t, 0, 0, 0, date);
-                Navigation.PushAsync(new RecordListPage());
+               // Navigation.PushAsync(new RecordListPage());
             }
             
 

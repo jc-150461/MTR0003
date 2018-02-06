@@ -19,7 +19,6 @@ namespace MuscleTrainingRecords00
         public ReModel()
         {
             if (RecordsModel.SelectRecords() != null)
-            //if (RecordsModel.SelectRecords() != null && !(RecordsModel.SelectRe().Equals(name)))
             {
                 var query = RecordsModel.SelectRecords();
                 Records = new ObservableCollection<Record>();
@@ -39,11 +38,6 @@ namespace MuscleTrainingRecords00
                     Records.Add(r);
                 }
             }
-
-            /*else if(RecordsModel.SelectRecords() != null && RecordsModel.SelectRe().Equals(name))
-            {
-                RecordsModel.UpdateRe(name,date);
-            }*/
 
             else
             {
