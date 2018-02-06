@@ -34,14 +34,13 @@ namespace MuscleTrainingRecords00
         private void addItemButton_Clicked(object sender, EventArgs e)
         {
             ReModel.name = t;
-            if (!(RecordsModel.SelectRe().Equals(t)))
+            if (RecordsModel.SelectRe().Equals(t))
             {
-                RecordsModel.InsertRe(1, t, 0, 0, 0, date);
+                RecordsModel.UpdateRe(t, date);
                 Navigation.PushAsync(new RecordListPage());
             }
-            else if(RecordsModel.SelectRe().Equals(t) && RecordsModel.SelectRecords() != null){
-
-                RecordsModel.UpdateRe(t,date);
+            else{
+                RecordsModel.InsertRe(1, t, 0, 0, 0, date);
                 Navigation.PushAsync(new RecordListPage());
             }
             
