@@ -166,7 +166,7 @@ namespace MuscleTrainingRecords00
         }
 
         /********************アップデートメソッド RecordPageに使用**************************************/
-        public static void  UpdateRecord(int m_no, int m_weight, int m_leg, int m_set, string m_date)
+        public static void UpdateRecord(int m_no, int m_weight, int m_leg, int m_set, string m_date)
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
@@ -209,7 +209,7 @@ namespace MuscleTrainingRecords00
                 try
                 {
                     //データベースに指定したSQLを発行します
-                    return db.Query<RecordsModel>("UPDATE [Records] SET [M_name] = '"+ name +"' WHERE [M_date] = '" + date + "'");
+                    return db.Query<RecordsModel>("UPDATE [Records] SET [M_name] = '" + name + "' WHERE [M_date] = '" + date + "'");
 
                 }
                 catch (Exception e)
@@ -219,7 +219,8 @@ namespace MuscleTrainingRecords00
                     return null;
                 }
             }
-
+        }
 
     }
+
 }
