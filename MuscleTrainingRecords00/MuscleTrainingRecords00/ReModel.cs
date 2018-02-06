@@ -18,10 +18,6 @@ namespace MuscleTrainingRecords00
         
         public ReModel()
         {
-           /* if(RecordsModel.SelectRecords().Equals(name))
-            {
-                RecordsModel.UpdateRe(date);
-            }*/
 
             if (RecordsModel.SelectRecords() != null)
             {
@@ -44,10 +40,10 @@ namespace MuscleTrainingRecords00
                 }
             }
 
-            /*if(RecoedsModel.SelectRecords())
+            else if(RecordsModel.SelectRecords() != null && RecordsModel.SelectRecords().Equals(name))
             {
-
-            }*/
+                RecordsModel.UpdateRe(date);
+            }
 
             else
             {
