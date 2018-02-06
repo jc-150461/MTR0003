@@ -198,35 +198,27 @@ namespace MuscleTrainingRecords00
 
 
         /********************アップデートメソッド RecordPageに使用**************************************/
-        public static void UpdateRe( string m_date)
+        public static List<RecordsModel> UpdateRe(string m_name, string m_date)
         {
+            string name = m_name;
+            string date = m_date;
+
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
-                /*int no=  m_no;
-                int weight = m_weight;
-                int leg = m_leg;
-                int set = m_set;
-                TimeSpan span = m_date;
-                int date = span.Days;*/
 
                 try
                 {
-                    //データベースに指定したSQLを発行
-                    //return db.Query<RecordsModel>("UPDATE [Records] SET [M_weight] = "+ weight +", [M_leg] = "+ leg +",[M_set] = "+ set + "WHERE [M_no] = "+ m_no);
-                    db.CreateTable<RecordsModel>();
+                    //データベースに指定したSQLを発行します
+                    return db.Query<RecordsModel>("UPDATE [Records] SET [M_name] = '"+ name +"' WHERE [M_date] = '" + date + "'");
 
-                    db.Update(new RecordsModel() {  M_date = m_date });
-
-                    db.Commit();
                 }
                 catch (Exception e)
                 {
 
-                    db.Rollback();
                     System.Diagnostics.Debug.WriteLine(e);
+                    return null;
                 }
             }
-        }
 
 
     }
