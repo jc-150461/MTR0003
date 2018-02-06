@@ -137,6 +137,7 @@
                       Refreshing="OnRefreshing"
                       RowHeight="65"
                       x:Name="list"
+                      ItemTapped="list_ItemTapped"
                       HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>

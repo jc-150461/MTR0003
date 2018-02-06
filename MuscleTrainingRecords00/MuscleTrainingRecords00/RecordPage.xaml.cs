@@ -26,12 +26,6 @@ namespace MuscleTrainingRecords00
             
         }
         
-       /* protected override void OnAppearing()
-        {
-            DisplayAlert("id", ReModelv2.key+" " + ReModelv2.name +" "+ReModelv2.date, "OK");
-
-        }*/
-
 
         //引っ張ったとき（更新）
         private async void OnRefreshing(object sender, EventArgs e)
@@ -67,5 +61,29 @@ namespace MuscleTrainingRecords00
             RecordModelv2.InsertRe(t,x,WeightText,RepsText,SetText,date);
             //RecordModelv2.InsertRe(0, "データ", 0, 0, 0, now);
         }
+
+        private async Task list_ItemTappedAsync(object sender, ItemTappedEventArgs e)
+        {
+            Recordv2 n = (Recordv2)(list.SelectedItem);
+            int m = n.M_no;
+
+
+            bool result = await DisplayAlert("削除", "この記録を削除しますか", "OK", "キャンセル");
+
+            if (result == true)
+            {
+                int no = m;
+
+                int M_no = no;
+
+                RecordsModel.DeleteRecords(M_no);
+
+                InitializeComponent();
+
+            }
+        }
+      
+
     }
+}
 }
