@@ -209,7 +209,7 @@ namespace MuscleTrainingRecords00
                 try
                 {
                     //データベースに指定したSQLを発行します
-                    return db.Query<RecordsModel>("UPDATE [Records] SET [M_name] = '" + name + "' WHERE [M_date] = '" + date + "'");
+                    return db.Query<RecordsModel>("UPDATE [Records] SET [M_date] = '" + date + "' WHERE [M_name] = '" + name + "'");
 
                 }
                 catch (Exception e)

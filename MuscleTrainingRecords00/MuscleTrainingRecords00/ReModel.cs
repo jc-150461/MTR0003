@@ -18,7 +18,7 @@ namespace MuscleTrainingRecords00
         
         public ReModel()
         {
-
+            //if (RecordsModel.SelectRecords() != null)
             if (RecordsModel.SelectRecords() != null && !(RecordsModel.SelectRe().Equals(name)))
             {
                 var query = RecordsModel.SelectRecords();
