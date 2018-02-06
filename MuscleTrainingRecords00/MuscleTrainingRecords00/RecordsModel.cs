@@ -119,6 +119,27 @@ namespace MuscleTrainingRecords00
                 }
             }
         }
+        public static List<RecordsModel> SelectName(String s)
+        {
+
+            using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
+            {
+
+                try
+                {
+
+                    //データベースに指定したSQLを発行
+                    return db.Query<RecordsModel>("SELECT [M_name] FROM [Records] where [M_name] ='"+s+"'");
+                    // ORDER BY[M_date]
+                }
+                catch (Exception e)
+                {
+
+                    System.Diagnostics.Debug.WriteLine(e);
+                    return null;
+                }
+            }
+        }
 
         /********************デリートメソッド*************************************/
         public static void DeleteRecords(int m_no)
