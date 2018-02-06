@@ -98,8 +98,9 @@ namespace MuscleTrainingRecords00
         }
 
         /*******************セレクトメソッド RecordListPage　 追加*************************************/
-        public static List<RecordsModel> SelectName(String s)
+        public static List<RecordsModel> SelectName(string m_name)
         {
+            string name = m_name;
 
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
@@ -108,7 +109,7 @@ namespace MuscleTrainingRecords00
                 {
 
                     //データベースに指定したSQLを発行
-                    return db.Query<RecordsModel>("SELECT [M_name] FROM [Records] where [M_name] ='"+s+"'");
+                    return db.Query<RecordsModel>("SELECT [M_name] FROM [Records] WHERE [M_name] = '" + name + "'");
                     // ORDER BY[M_date]
                 }
                 catch (Exception e)
