@@ -24,8 +24,8 @@
                    FontAttributes="Bold"/>
 
                 <Image x:Name="image"
-                       VerticalOptions="StartAndExpand"
-                       HorizontalOptions="StartAndExpand"
+                       VerticalOptions="FillAndExpand"
+                       HorizontalOptions="CenterAndExpand"
                        WidthRequest="450"
                        HeightRequest="300"
                        Aspect="Fill"/>
@@ -33,12 +33,12 @@
                 <Label Text="やり方"
                        FontSize="Large"
                        FontAttributes="Bold"
-                       HorizontalOptions="Start"/>
+                       HorizontalOptions="Start"
+                       VerticalOptions="EndAndExpand"/>
 
                 <Label Text=""
                    x:Name="Description"
-                   HorizontalOptions="StartAndExpand"
-                   VerticalOptions="StartAndExpand"
+                   VerticalOptions="EndAndExpand"
                    FontSize="Default"
                    FontAttributes="Bold"/>
 

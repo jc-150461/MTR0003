@@ -132,7 +132,9 @@
 
             </Grid>
                 
-                 <ListView ItemsSource="{Binding Recordsv2}"
+                <Label Text=""/>
+
+                <ListView ItemsSource="{Binding Recordsv2}"
                       IsPullToRefreshEnabled="True"
                       Refreshing="OnRefreshing"
                       RowHeight="65"
