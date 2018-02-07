@@ -49,9 +49,6 @@ namespace MuscleTrainingRecords00
                     
 
                 var db = TodoItemDatabase.getDatabase();
-                //String sName = eName.Text;
-                //String sNotes = eNotes.Text;
-                //Boolean bDone = eDone.IsToggled;
                 int B_Weight = int.Parse(bWeight.Text);
                 int B_Fat = int.Parse(bFat.Text);
                 DateTime dCreated = DateTime.Today;
@@ -79,11 +76,6 @@ namespace MuscleTrainingRecords00
             {
                 DisplayAlert("", "数値を入力してください", "OK");
             }
-
-            /*private void eCreated_DateSelected(object sender, DateChangedEventArgs e)//追加
-            {
-                yyyymmdd = new DateTime(eCreated.Date.Year, eCreated.Date.Month, eCreated.Date.Day);
-            }*/
         }
     }
 }

@@ -46,33 +46,28 @@ namespace MuscleTrainingRecords00
         {
             try
             {
-                if (Weight.Text == null || Reps.Text == null || Set.Text == null)
+                double WeightText = Double.Parse(Weight.Text);
+                int RepsText = int.Parse(Reps.Text);
+                int SetText = int.Parse(Set.Text);
+
+                bool result = await DisplayAlert("保存", WeightText + "kg　" + RepsText + "回数　" + SetText +
+                    "セット を保存しますか", "OK", "キャンセル");
+
+                if (result == true)
                 {
-                    DisplayAlert("", "入力が不足しています", "OK");
+                    DateTime now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+                    string date = now.ToString("yyyy/MM/dd");
+
+                    RecordModelv2.InsertRe(t, x, WeightText, RepsText, SetText, date);
+
+                    m_name.Text = x;
+
+                    InitializeComponent();
+
                 }
-            }
-            catch (Exception)
+            }catch (Exception)
             {
-                DisplayAlert("","入力してください","OK");
-            }
-
-            double WeightText = Double.Parse(Weight.Text);
-            int RepsText = int.Parse(Reps.Text);
-            int SetText = int.Parse(Set.Text);
-
-            bool result = await DisplayAlert("削除", "この記録を削除しますか", "OK", "キャンセル");
-
-            if (result == true)
-            {
-                DateTime now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-                string date = now.ToString("yyyy/MM/dd");
-
-                RecordModelv2.InsertRe(t, x, WeightText, RepsText, SetText, date);
-
-                m_name.Text = x;
-
-                InitializeComponent();
-
+                DisplayAlert("", "入力してください", "OK");
             }
 
         }
@@ -87,11 +82,8 @@ namespace MuscleTrainingRecords00
 
             if (result == true)
             {
-                int no = m;
 
-                int M_no = no;
-
-                RecordModelv2.DeleteRecords(M_no);
+                RecordModelv2.DeleteRecords(m);
 
                 m_name.Text = x;
 
