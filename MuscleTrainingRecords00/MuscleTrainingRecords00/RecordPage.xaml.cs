@@ -23,7 +23,31 @@ namespace MuscleTrainingRecords00
             x = l;
             t = m;
 
-            
+            ToolbarItem tItem = new ToolbarItem
+            {
+                Icon = "ic_delete.png",
+                Text = "メニュー削除",
+                Priority = 1,
+                Order = ToolbarItemOrder.Primary,
+                Command = new Command(async () =>
+                {
+
+                    bool result = await DisplayAlert("削除", "このメニューを削除しますか", "OK", "キャンセル");
+
+                    if (result == true)
+                    {
+
+                        RecordsModel.DeleteRecords(m);
+
+                        InitializeComponent();
+
+                        await Navigation.PushAsync(new RecordListPage());
+                    }
+                }),
+
+
+            };
+            this.ToolbarItems.Add(tItem);
         }
         
 

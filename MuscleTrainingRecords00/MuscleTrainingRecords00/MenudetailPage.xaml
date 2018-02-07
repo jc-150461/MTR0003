@@ -23,16 +23,6 @@
                    FontSize="Large"
                    FontAttributes="Bold"/>
 
-                <Label Text=""
-                   x:Name="Load"
-                   HorizontalOptions="EndAndExpand"
-                       VerticalOptions="EndAndExpand"
-                   FontSize="Default"
-                   TextColor="Red"/>
-            </StackLayout>
-
-            <StackLayout Orientation="Vertical">
-
                 <Image x:Name="image"
                        VerticalOptions="StartAndExpand"
                        HorizontalOptions="StartAndExpand"
