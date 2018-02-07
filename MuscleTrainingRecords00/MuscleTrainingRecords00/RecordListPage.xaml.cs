@@ -28,10 +28,8 @@ namespace MuscleTrainingRecords00
             list.IsRefreshing = false;
 
             InitializeComponent();
-
         }
-
-        
+ 
         
 
         private void RecordListButton(object sender, EventArgs e)
@@ -47,29 +45,11 @@ namespace MuscleTrainingRecords00
              Record n =(Record)(list.SelectedItem);
              int m = n.M_no;
 
-            //DateTime now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-
-            //ReModelv2.date = now;
-            //ReModelv2.key = m;  
             ReModelv2.name = l;
 
             Navigation.PushAsync(new RecordPage(l,m));
 
         }
 
-        /*async void OnDelete_Clicked(object sender, EventArgs args)
-        {
-            string no = ((DeleteButton)sender).NoText;
-            string name = ((DeleteButton)sender).NameText;
-
-            var result = await DisplayAlert("削除", "このメニューを削除しますか", "OK", "キャンセル");
-            if (result == true)
-            {
-                int m_no = int.Parse(no);
-                RecordsModel.DeleteRecords(m_no);
-
-                InitializeComponent();
-            }
-        }*/
     }
 }

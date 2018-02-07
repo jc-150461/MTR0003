@@ -15,7 +15,6 @@
                      WinPhone="0, 0, 0, 0" />
             </StackLayout.Margin>
 
-
             <StackLayout Orientation="Vertical"  >
                 <Label Text=""
                    x:Name="Transition"
@@ -34,13 +33,12 @@
 
             <StackLayout Orientation="Vertical">
 
-               <!-- <Image x:Name="image"
+                <!-- <Image x:Name="image"
                        VerticalOptions="StartAndExpand"
                        HorizontalOptions="StartAndExpand"
                        WidthRequest="450"
                        HeightRequest="300"
                        Aspect="Fill"/>-->
-
 
                 <Label Text="やり方"
                        FontSize="Large"
@@ -56,8 +54,13 @@
 
             </StackLayout>
 
-
-            <Button  Clicked="addItemButton_Clicked" Text="記録へ追加" x:Name="addItemButton" BackgroundColor="RoyalBlue" TextColor="White" FontSize="Default" VerticalOptions="EndAndExpand" />
+            <Button  Clicked="addItemButton_Clicked" 
+                     Text="記録へ追加"
+                     x:Name="addItemButton" 
+                     BackgroundColor="RoyalBlue" 
+                     TextColor="White" 
+                     FontSize="Default" 
+                     VerticalOptions="EndAndExpand" />
 
 
         </StackLayout>

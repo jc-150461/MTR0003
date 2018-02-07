@@ -6,9 +6,8 @@ namespace MuscleTrainingRecords00
 {
     class ReModelv2
     {
-        //public static int key;
+
         public static string name;
-        //public static DateTime date;
         public ObservableCollection<Recordv2> Recordsv2
         {
             get;
@@ -18,14 +17,10 @@ namespace MuscleTrainingRecords00
 
         public ReModelv2()
         {
-            //var query = RecordModelv2.SelectRe(key);
             var query = RecordModelv2.SelectRe(name); //前回　date
             if (query != null)
-            //if (RecordModelv2.SelectRe(key) != null)
-            //if(RecordModelv2.SelectRecord()!= null)
+
             {
-                //var query = RecordModelv2.SelectRe(key);
-                //var query = RecordModelv2.SelectRecord();
                 Recordsv2 = new ObservableCollection<Recordv2>();
 
                 foreach (var record in query)//拡張forループ
@@ -44,11 +39,6 @@ namespace MuscleTrainingRecords00
                 }
             }
 
-            /*if(RecoedsModel.SelectRecords())
-            {
-
-            }*/
-
             else
             {
                 Recordsv2 = new ObservableCollection<Recordv2>
@@ -57,7 +47,7 @@ namespace MuscleTrainingRecords00
                {
                    M_no=0,
                    M_name="データなし",
-                   M_weight=0,
+                   M_weight=0.0,
                    M_leg=0,
                    M_set=0,
                    M_date= new DateTime(DateTime.Now.Year,DateTime.Now.Month,DateTime.Now.Day).ToString("yyyy/MM/dd"),
@@ -75,7 +65,7 @@ namespace MuscleTrainingRecords00
 
         public string M_name { get; set; } //筋トレ名前
 
-        public int M_weight { get; set; } //重量
+        public double M_weight { get; set; } //重量
 
         public int M_leg { get; set; } //回数
 

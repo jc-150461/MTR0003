@@ -13,7 +13,7 @@ namespace MuscleTrainingRecords00
 
         public string M_name { get; set; } //筋トレ名前
 
-        public int M_weight { get; set; } //重量
+        public double M_weight { get; set; } //重量
 
         public int M_leg { get; set; } //回数
 

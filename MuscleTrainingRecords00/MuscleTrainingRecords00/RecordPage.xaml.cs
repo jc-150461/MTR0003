@@ -56,7 +56,7 @@ namespace MuscleTrainingRecords00
                 DisplayAlert("","入力してください","OK");
             }
 
-            int WeightText = int.Parse(Weight.Text);
+            double WeightText = Double.Parse(Weight.Text);
             int RepsText = int.Parse(Reps.Text);
             int SetText = int.Parse(Set.Text);
 

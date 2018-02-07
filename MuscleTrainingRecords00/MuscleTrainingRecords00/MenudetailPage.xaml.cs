@@ -20,7 +20,6 @@ namespace MuscleTrainingRecords00
         {
             InitializeComponent();
 
-
             Transition.Text = m.Trim();
 
             Description.Text = d;
@@ -37,16 +36,16 @@ namespace MuscleTrainingRecords00
 
             //DisplayAlert("",""+RecordsModel.SelectRe(),"");
             //ReModel.name = t;
-            if ( RecordsModel.SelectName(t) != null)
+            /*if ( RecordsModel.SelectName(t) != null)
             {
                 DisplayAlert("", "そのメニューはもう既に存在しています", "OK");
                 //RecordsModel.UpdateRe(t, date);
                 Navigation.PushAsync(new RecordListPage());
             }
-            else{
-                RecordsModel.InsertRe(1, t, 0, 0, 0, date);
+            else{*/
+                RecordsModel.InsertRe(1, t, 0.0, 0, 0, date);
                 Navigation.PushAsync(new RecordListPage());
-            }
+            //}
             
 
         }
