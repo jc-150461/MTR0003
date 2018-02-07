@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -24,7 +25,7 @@ namespace MuscleTrainingRecords00
 
             Description.Text = d;
 
-            //image.Source = ImageSource.FromStream(() => GetType().GetTypeInfo().Assembly.GetManifestResourceStream(i));
+            image.Source = ImageSource.FromStream(() => GetType().GetTypeInfo().Assembly.GetManifestResourceStream(i));
 
             t = m;
 
@@ -33,20 +34,19 @@ namespace MuscleTrainingRecords00
 
         private void addItemButton_Clicked(object sender, EventArgs e)
         {
-
-            //DisplayAlert("",""+RecordsModel.SelectRe(),"");
-            //ReModel.name = t;
-            /*if ( RecordsModel.SelectName(t) != null)
+            List<RecordsModel> list = RecordsModel.SelectName(t);
+            if ((list != null) && (list.Count != 0))
             {
                 DisplayAlert("", "そのメニューはもう既に存在しています", "OK");
                 //RecordsModel.UpdateRe(t, date);
                 Navigation.PushAsync(new RecordListPage());
             }
-            else{*/
+            else
+            {
                 RecordsModel.InsertRe(1, t, 0.0, 0, 0, date);
                 Navigation.PushAsync(new RecordListPage());
-            //}
-            
+            }
+
 
         }
     }

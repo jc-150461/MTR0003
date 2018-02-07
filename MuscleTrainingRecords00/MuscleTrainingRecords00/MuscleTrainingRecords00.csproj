@@ -171,6 +171,81 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="image\a-muka-ru.png" />
+    <EmbeddedResource Include="image\a-norudopuresu.jpg" />
+    <EmbeddedResource Include="image\abukura.png" />
+    <EmbeddedResource Include="image\ba-beruhiltupusurasuto.jpg" />
+    <EmbeddedResource Include="image\ba-berurannzi.jpg" />
+    <EmbeddedResource Include="image\ba-berusukuwaltuto.jpg" />
+    <EmbeddedResource Include="image\ba-thikarubenchi.jpg" />
+    <EmbeddedResource Include="image\ballbike.jpg" />
+    <EmbeddedResource Include="image\ballcl.jpg" />
+    <EmbeddedResource Include="image\baltukuekusutennsyon.jpg" />
+    <EmbeddedResource Include="image\benntipuresu.jpg" />
+    <EmbeddedResource Include="image\benntoo-ba-rou.jpg" />
+    <EmbeddedResource Include="image\buritya-ka-ru.jpg" />
+    <EmbeddedResource Include="image\burugariannkukuwaltuto.jpg" />
+    <EmbeddedResource Include="image\danbel cl.jpg" />
+    <EmbeddedResource Include="image\danberubenntipuresu.jpg" />
+    <EmbeddedResource Include="image\dannberualtupuraitorou.png" />
+    <EmbeddedResource Include="image\dannberualtupuro-.png" />
+    <EmbeddedResource Include="image\dannberuhurai.jpg" />
+    <EmbeddedResource Include="image\dannberupuruo-ba.jpg" />
+    <EmbeddedResource Include="image\dannberurou.png" />
+    <EmbeddedResource Include="image\dannberusukuwaltuto.png" />
+    <EmbeddedResource Include="image\dekurainnbenntipuresu.png" />
+    <EmbeddedResource Include="image\deltudorihuto.png" />
+    <EmbeddedResource Include="image\deltupusu.jpg" />
+    <EmbeddedResource Include="image\dumbbell_man.png" />
+    <EmbeddedResource Include="image\haltukurihuto .jpg" />
+    <EmbeddedResource Include="image\haltukusukuwaltuto.jpg" />
+    <EmbeddedResource Include="image\hammerka-ru.png" />
+    <EmbeddedResource Include="image\hanngingu.jpg" />
+    <EmbeddedResource Include="image\huronntopuesu.jpg" />
+    <EmbeddedResource Include="image\inkurainnbenntipuresu.png" />
+    <EmbeddedResource Include="image\inkurandanberuhurai.png" />
+    <EmbeddedResource Include="image\innkuraindannberuka-ru.jpg" />
+    <EmbeddedResource Include="image\ka-hureizu.jpg" />
+    <EmbeddedResource Include="image\ke-burukurosuo-ba-.jpg" />
+    <EmbeddedResource Include="image\kennsui.png" />
+    <EmbeddedResource Include="image\kiltuku back.jpg" />
+    <EmbeddedResource Include="image\konsentore-syonka-ru.png" />
+    <EmbeddedResource Include="image\lat-pulldown.png" />
+    <EmbeddedResource Include="image\naroubentipuresu.png" />
+    <EmbeddedResource Include="image\Noimage_image.png" />
+    <EmbeddedResource Include="image\orutaneito danberuka-ru.png" />
+    <EmbeddedResource Include="image\peltukudeltukuhurai.jpg" />
+    <EmbeddedResource Include="image\pull-up-knee-raise.jpg" />
+    <EmbeddedResource Include="image\puruo-ba-.png" />
+    <EmbeddedResource Include="image\reggurize.jpg" />
+    <EmbeddedResource Include="image\reghold.jpg" />
+    <EmbeddedResource Include="image\reltguka-ru.png" />
+    <EmbeddedResource Include="image\reltuguekusutennsyon.png" />
+    <EmbeddedResource Include="image\reltugupuresu.png" />
+    <EmbeddedResource Include="image\risutoka-ru.jpg" />
+    <EmbeddedResource Include="image\ru-manianndeltudorihuto.png" />
+    <EmbeddedResource Include="image\rusiantuwist.jpg" />
+    <EmbeddedResource Include="image\saidoreizu.jpg" />
+    <EmbeddedResource Include="image\sidebike.jpg" />
+    <EmbeddedResource Include="image\sidecl.jpg" />
+    <EmbeddedResource Include="image\siteltutoro-rinngu.png" />
+    <EmbeddedResource Include="image\T-ba-rou.jpg" />
+    <EmbeddedResource Include="image\toraisepusuekusutennsyon.jpg" />
+    <EmbeddedResource Include="image\toraisepusukiltukuback.jpg" />
+    <EmbeddedResource Include="image\trunk-twist.png" />
+    <EmbeddedResource Include="image\TRX.jpg" />
+    <EmbeddedResource Include="image\tyesutopuresu.jpg" />
+    <EmbeddedResource Include="image\tyu-bubenntoo-bari-inngu.jpg" />
+    <EmbeddedResource Include="image\tyu-budeltudorihuto.png" />
+    <EmbeddedResource Include="image\tyu-bupurudaunn.png" />
+    <EmbeddedResource Include="image\tyu-busi-teltutoro-inngu.png" />
+    <EmbeddedResource Include="image\wanna-muhurenntipuresu.png" />
+    <EmbeddedResource Include="image\wannhanndoro-inngu.png" />
+    <EmbeddedResource Include="image\wannreltugusukuwaltuto.png" />
+    <EmbeddedResource Include="image\weighted-crunch.jpg" />
+    <EmbeddedResource Include="image\zyannpusukuwaltuto .jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

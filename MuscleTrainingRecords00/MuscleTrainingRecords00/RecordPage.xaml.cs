@@ -60,14 +60,13 @@ namespace MuscleTrainingRecords00
 
                     RecordModelv2.InsertRe(t, x, WeightText, RepsText, SetText, date);
 
-                    m_name.Text = x;
-
                     InitializeComponent();
 
+                     m_name.Text = x;
                 }
             }catch (Exception)
             {
-                DisplayAlert("", "入力してください", "OK");
+              await  DisplayAlert("", "入力してください", "OK");
             }
 
         }
@@ -85,9 +84,9 @@ namespace MuscleTrainingRecords00
 
                 RecordModelv2.DeleteRecords(m);
 
-                m_name.Text = x;
-
                 InitializeComponent();
+
+                m_name.Text = x;
 
             }
         }
