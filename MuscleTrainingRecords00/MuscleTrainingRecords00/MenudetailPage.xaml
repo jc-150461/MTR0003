@@ -3,25 +3,61 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MuscleTrainingRecords00.MenudetaliPage">
     <ContentPage.Content>
+
         <StackLayout Orientation="Vertical">
 
-            <Label Text=""
+            <StackLayout.Margin>
+
+                <!-- iOSはトップに 20 の余白が必要 -->
+                <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 20, 0, 0"
+                     Android="0, 0, 0, 0"
+                     WinPhone="0, 0, 0, 0" />
+            </StackLayout.Margin>
+
+
+            <StackLayout Orientation="Vertical"  >
+                <Label Text=""
                    x:Name="Transition"
-                   HorizontalOptions="CenterAndExpand"
-                   VerticalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand"                
                    FontSize="Large"
                    FontAttributes="Bold"/>
 
-            <Image x:Name="image"/>
+                <Label Text=""
+                   x:Name="Load"
+                   HorizontalOptions="EndAndExpand"
+                       VerticalOptions="EndAndExpand"
+                   FontSize="Default"
+                   TextColor="Red"/>
+            </StackLayout>
 
-            <Label Text=""
+            <StackLayout Orientation="Vertical">
+
+                <Image x:Name="image"
+                       VerticalOptions="StartAndExpand"
+                       HorizontalOptions="StartAndExpand"
+                       WidthRequest="450"
+                       HeightRequest="300"
+                       Aspect="Fill"/>
+
+
+                <Label Text="やり方"
+                       FontSize="Large"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Start"/>
+
+                <Label Text=""
                    x:Name="Description"
-                   HorizontalOptions="CenterAndExpand"
-                   VerticalOptions="EndAndExpand"
-                   FontSize="Large"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="StartAndExpand"
+                   FontSize="Default"
                    FontAttributes="Bold"/>
 
-            <Button  Clicked="addItemButton_Clicked" Text="記録へ追加" x:Name="addItemButton" BackgroundColor="RoyalBlue" TextColor="White" FontSize="Large" VerticalOptions="EndAndExpand" />
+            </StackLayout>
+
+
+            <Button  Clicked="addItemButton_Clicked" Text="記録へ追加" x:Name="addItemButton" BackgroundColor="RoyalBlue" TextColor="White" FontSize="Default" VerticalOptions="EndAndExpand" />
 
 
         </StackLayout>

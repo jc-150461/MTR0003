@@ -25,7 +25,7 @@ namespace MuscleTrainingRecords00
 
             Description.Text = d;
 
-            //image.Source = new Uri(i);
+            image.Source = ImageSource.FromStream(() => GetType().GetTypeInfo().Assembly.GetManifestResourceStream(i));
 
             t = m;
 
@@ -36,7 +36,7 @@ namespace MuscleTrainingRecords00
         {
 
             //DisplayAlert("",""+RecordsModel.SelectRe(),"");
-            ReModel.name = t;
+            //ReModel.name = t;
             if ( RecordsModel.SelectName(t) != null)
             {
                 DisplayAlert("", "そのメニューはもう既に存在しています", "OK");
