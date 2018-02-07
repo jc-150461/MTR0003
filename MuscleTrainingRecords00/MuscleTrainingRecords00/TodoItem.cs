@@ -15,8 +15,8 @@ namespace MuscleTrainingRecords00
         //public string Name { get; set; }
         //public string Notes { get; set; }
         public bool Done { get; set; }
-        public int Bweight { get; set; }
-        public int Bfat { get; set; }
+        public double Bweight { get; set; }
+        public double Bfat { get; set; }
 
         public static implicit operator Task<object>(TodoItem v)
         {
