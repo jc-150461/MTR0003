@@ -22,7 +22,7 @@ namespace MuscleTrainingRecords00
             addItemButton.Clicked += Handle_ClickedAsync;
 
         }
-        //DateTime yyyymmdd;//追加
+    
 
 
 
@@ -37,16 +37,7 @@ namespace MuscleTrainingRecords00
             try
             {
 
-                if (bWeight.Text == null)
-                {
-                    DisplayAlert("", "体重を入力してください", "OK");
-
-                }
-                else if (bFat.Text == null)
-                {
-                    DisplayAlert("", "体脂肪率を入力してください", "OK");
-                }
-                    
+               
 
                 var db = TodoItemDatabase.getDatabase();
                 int B_Weight = int.Parse(bWeight.Text);
@@ -59,14 +50,14 @@ namespace MuscleTrainingRecords00
                 {
                     TodoItem item = new TodoItem() { Created = dCreated, Bweight = B_Weight, Bfat = B_Fat };
                     await db.SaveItemAsync(item);
-                    await DisplayAlert("", "記録されました:" + item.Created, "OK");
+                    await DisplayAlert("", "記録されました:" + item.Created.ToString("yyyy/MM/dd"), "OK");
                 }
                 else
                 {
                     await db.DeleteItemAsync(sameDateItem);
                     TodoItem item = new TodoItem() { Created = dCreated, Bweight = B_Weight, Bfat = B_Fat };
                     await db.SaveItemAsync(item);
-                    await DisplayAlert("", "更新されました:{" + sameDateItem.Created + "}→{" + item.Created + "}", "OK");
+                    await DisplayAlert("", "更新されました:{" + sameDateItem.Created.ToString("yyyy/MM/dd") + "}→{" + item.Created.ToString("yyyy/MM/dd") + "}", "OK");
 
                 }
 
@@ -74,7 +65,7 @@ namespace MuscleTrainingRecords00
             }
             catch (Exception)
             {
-                DisplayAlert("", "数値を入力してください", "OK");
+               await DisplayAlert("", "数値を入力してください", "OK");
             }
         }
     }

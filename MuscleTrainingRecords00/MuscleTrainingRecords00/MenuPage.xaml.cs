@@ -171,14 +171,14 @@ namespace MuscleTrainingRecords00
         private void listView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
 
-            // DisplayAlert("", , "OK");
+            
 
             Training training = (Training)listView.SelectedItem;
             string m = training.Menu;
             string d = training.Desc;
             string i = training.image;
 
-            //Navigation.PushAsync(new MenudetaliPage(l));
+          
 
             Navigation.PushAsync(new MenudetaliPage(m, d, i));
         }

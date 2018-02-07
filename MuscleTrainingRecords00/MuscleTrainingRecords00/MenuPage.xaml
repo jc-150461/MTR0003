@@ -67,14 +67,14 @@
 
 
             <BoxView 
-                BackgroundColor="Black"
+                BackgroundColor="SkyBlue"
                 HeightRequest="0.5"
                 WidthRequest="600"/>
 
             <StackLayout Orientation="Vertical">
 
                 <ListView x:Name="listView"
-                      SeparatorColor="Black"
+                      SeparatorColor="SkyBlue"
                       ItemTapped="listView_ItemTapped" />
 
             </StackLayout>

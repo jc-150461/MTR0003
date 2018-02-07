@@ -68,9 +68,8 @@ namespace MuscleTrainingRecords00
                 {
 
                     //データベースに指定したSQLを発行
-                    // 前回　return db.Query<RecordModelv2>("SELECT * FROM [Re] WHERE [M_no] =" + no);
                     return db.Query<RecordModelv2>("SELECT * FROM [Re] WHERE [M_name] = '" +  name + "'" );
-                    // ORDER BY[M_date]
+ 
                 }
                 catch (Exception e)
                 {

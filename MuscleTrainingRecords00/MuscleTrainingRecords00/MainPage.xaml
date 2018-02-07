@@ -12,11 +12,7 @@
         </x:Arguments>
     </NavigationPage>
 
-    <!--<NavigationPage Title="トレーニング履歴" Icon="notebook.png">
-        <x:Arguments>
-            <local:TrainingLogPage />
-        </x:Arguments>
-    </NavigationPage>-->
+  
 
     <NavigationPage Title="メニュー一覧" Icon="weightlifting.png">
         <x:Arguments>
@@ -24,7 +20,7 @@
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="ボディー統計" Icon="graph (1).png">
+    <NavigationPage Title="ボディ統計" Icon="graph (1).png">
         <x:Arguments>
             <local:GraphPage />
         </x:Arguments>
