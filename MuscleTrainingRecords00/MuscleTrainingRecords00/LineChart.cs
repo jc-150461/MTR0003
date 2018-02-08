@@ -117,8 +117,8 @@ namespace MuscleTrainingRecords00
 
 
 
-            var startDate = DateTime.Today.AddDays(-1);
-            var endDate = DateTime.Today.AddDays(+2);
+            var startDate = DateTime.Today.AddDays(-2);
+            var endDate = DateTime.Today.AddDays(+6);
 
             var minValue = DateTimeAxis.ToDouble(startDate);
             var maxValue = DateTimeAxis.ToDouble(endDate);
